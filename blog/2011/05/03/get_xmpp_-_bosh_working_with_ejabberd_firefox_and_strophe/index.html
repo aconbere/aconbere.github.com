@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+        <title>Anders Conbere's 
+Meat Flappings - Get XMPP - BOSH working with Ejabberd, Firefox and Strophe
+</title>
+        <link rel="alternate" type="application/atom+xml" href="feed.atom" title="Meat Flappings - Feed">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/base.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/reset.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/main.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/fonts.css">
+</head>
+
+<body>
+    <div id="header">
+        
+        <h3><a href="/">&lt;- Take me home</a></h3>
+        <h1><a href="http://anders.conbere.org/blog/">Meat Flappings</a></h1>
+        
+    </div>
+
+    <div id="content">
+        
+<div class="post">
+    
+    <div class="meta">
+        <h3 id="document_title"><a href="http://anders.conbere.org/blog/2011/05/03/get_xmpp_-_bosh_working_with_ejabberd_firefox_and_strophe">Get XMPP - BOSH working with Ejabberd, Firefox and Strophe</a></h3>
+        <p>Published on: <span class="published_on">2011-05-03 by Anders Conbere</span></p>
+    </div>
+    <div class="post_body">
+    <p>If you're planning on using XMPP as part of a communication tool in your website, flash application, or behind restricted firewalls... chances are that you're going to end up using BOSH.</p>
+<p>BOSH (<a href="http://xmpp.org/extensions/xep-0124.html">Bidirectional-streams Over Synchronous HTTP</a>) is a Comet like protocol that provides a method for developers to use XMPP by way of HTTP in their applications. The trick is that HTTP doesn't really provide first class support for the tools needed to provide XMPP; HTTP is synchronous providing simple call and response methods versus XMPP's asynchronous event based protocol. The first attempts to overcome this used HTTP polling, in which every so often the client would ask the xmpp server "do I have any more messages". However with increasing demands for near realtime communication that time between requests decreases and as it does, polling begins to take a larger toll on web servers, both in terms of bandwidth and responsiveness.</p>
+<p>To solve this protocols like Comet and BOSH have evolved. They work by making an http request with a long timeout (30 seconds for instance), when a new message arrives the server (finally) responds to the request. The client receives this new message and instantly initiates a new http request. This way the server almost always has a hanging HTTP request to respond to, and there are no extra http requests made beyond those that are needed.</p>
+<blockquote>
+<p>For more general information check out <a href="http://metajack.wordpress.com/2008/07/02/xmpp-is-better-with-bosh/">XMPP is better with BOSH</a></p>
+</blockquote>
+<p>Yesterday I set about getting my own test environment running for developing some BOSH related apps I'm working on. This turned out to be a bit of a struggle as I ran into a variety of issues that I had no idea about. The basics seem easy, install an xmpp server that supports BOSH, get a BOSH client, use it to write a test app and have at it. But there are some small details to get in the way. First is that not all web browsers support making XHR from local files (Firefox tells me this is a security issue), so you'll need to host your development files on a local webserver. Second is that unless you want to set up a crossdomain policy (not difficult) you'll need to have the BOSH server running on the same domain and port as your development files are being hosted. For most of us this means we'll need to set up some basic proxying.</p>
+<p>Do do this I used</p>
+<ul>
+<li><a href="http://www.ejabberd.im/">EJabberdD</a></li>
+<li><a href="http://wiki.nginx.org/Main">NGinX</a></li>
+<li><a href="http://code.stanziq.com/strophe/">Strophe</a></li>
+</ul>
+<h4>First:</h4>
+<p>If you have the a version of Ejabberd later than 2.0 bosh support is enabled by default. To see if this is the case navigate to your local ejabberd instance <a href="http://localhost:5280/http-bind">http://localhost:5280/http-bind</a> if that isn't running then take a look at your ejabberd config.</p>
+<p>There should be a section called "modules" near the bottom. If the module mod_http_bind isn't present, add it to the list of enabled modules. (as a quick warning if it's the <em>last</em> item in the list, you must not put a comma after it)</p>
+<pre><code>{modules,
+ [
+    {mod_http_bind, []},
+    ...
+ ]}
+</code></pre>
+<p>After that, check to make sure that http-bind is enabled in the ejabbed http server. It should look like this:</p>
+<pre><code>{5280, ejabberd_http, [
+         captcha,
+         http_bind,
+         http_poll,
+         web_admin
+        ]}
+</code></pre>
+<p>not restart your ejabberd server.</p>
+<pre><code>$&gt; ejabberdctl restart
+</code></pre>
+<p>and try navigating to <a href="http://localhost:5280/http-bind">http://localhost:5280/http-bind</a>. If it is still not responding take a look at the ejabberd logs or try starting your ejabberd server in "live" mode <code>$&gt; ejabberdctl live</code></p>
+<h4>Second:</h4>
+<p>Now that we have a running BOSH connection, we need it to be hosted at the same domain and port as our other web files. To do this we'll use the nginx proxy_pass directive (similar directives exist for apache). The server section of my nginx config looks like this.</p>
+<pre><code>server {
+    listen       80;
+    server_name  localhost;
+
+    location ~ ^/http-bind/ {       
+        proxy_pass http://localhost:5280;
+    }
+
+    location / {
+        root /var/www/development;
+    }
+}
+</code></pre>
+<p>This provides a proxy back to my running ejabberd server, and a web root to host my development files on.</p>
+<h4>Last:</h4>
+<p>With those two things set up, you can either, symlink or move your dev code into the nginx root established above. Point Strophe to <a href="http://localhost/http-bind/">http://localhost/http-bind</a> and everything should work.</p>
+<h4>Other Issues</h4>
+<p>There have been noted some issues with running strophe along side certain version of Firebug. If you are seeing empty responses from the server, this could be the case. You can side-step it by disabling the "Show XMLHttpRequests" console feature in the firebug console.</p>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+    <div id="footer">
+        
+        <p>Generated with love by <a href="http://github.com/aconbere/igor/">Igor</a></p>
+        
+    </div>
+
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-2522671-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+    
+    
+    
+</body>
+</html>

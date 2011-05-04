@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+        <title>Anders Conbere's Meat Flappings</title>
+        <link rel="alternate" type="application/atom+xml" href="feed.atom" title="Meat Flappings - Feed">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/base.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/reset.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/main.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/fonts.css">
+</head>
+
+<body>
+    <div id="header">
+        
+        <h3><a href="/">&lt;- Take me home</a></h3>
+        <h1><a href="http://anders.conbere.org/blog/">Meat Flappings</a></h1>
+        
+    </div>
+
+    <div id="content">
+        
+
+
+<div class="post"> 
+    <div class="meta">
+        <h3 class="post_title"><a href="http://anders.conbere.org/blog/2011/05/03/concatinative_versus_object_oriented_design">Concatinative Versus Object Oriented Design</a></h3>
+        <p>Published on: <span class="published_on">2011-05-03 by Anders Conbere</span></p>
+    </div>
+
+    <div class="post_body">
+    <p>I finally moved my blog over to using <a href="http://github.com/aconbere/igor">Igor</a> my new static blog generator. A couple of things have fallen out of this work. First is a feeling of two design forces pulling me in opposite directions. I feel torn between the simple semantics of a group of functions and a few monolithic classes. The former doesn't feel particularly pythonic, but the latter doesn't feel particularly well designed.</p>
+<p>Having seen some fantastic application design I can tell that Igor isn't the most well designed of programs. There are functions littered in modules that they don't belong, there are classes where there doesn't need to be and no classes where there should be! And I should have seen this coming. I set out on this project with the goal of not designing up front. Instead to build a working tools and to refine it. But I've found that the result is an application that works but lacks beauty.</p>
+<p>So let's look at some of the problems here, and some solutions I've been working on.</p>
+<p>The primary goal of Igor is to make publishing a simple, relatively static website simple for me. I've decided to accomplish this through simple parsing of text files and some opinionated choices on directory structure. A secondary goal related to the first is to allow me to do this with as little extra effort as possible. I don't want to have to use external scripts, I don't want to type out the date to get the published date, etc. To that end I've decided to make as much use of the Operating System and VCS as possible.</p>
+<p>So the design needs to work something like.</p>
+<p>Given source and destination directories</p>
+<ul>
+<li>retrieve the names of all the text files in the _posts directory below it</li>
+<li>parse each of them, applying an apporpriate markup filter</li>
+<li>publish each post to an appropiately named directory in the destination</li>
+</ul>
+    </div>
+
+    <a href="http://anders.conbere.org/blog/2011/05/03/concatinative_versus_object_oriented_design">[ ...Read More ]</a>
+</div>
+
+
+
+    </div>
+
+    
+<div id="posts-list">
+    <div class="posts-list-inner">
+        <ol>
+        
+            <li>2011-05-03 - <a href="http://anders.conbere.org/blog/2011/05/03/concatinative_versus_object_oriented_design">Concatinative Versus Object Oriented Design</a></li>
+        
+            <li>2011-05-03 - <a href="http://anders.conbere.org/blog/2011/05/03/the_problem_finding_talent">The Problem Finding Talent</a></li>
+        
+            <li>2011-05-03 - <a href="http://anders.conbere.org/blog/2011/05/03/setup_and_teardown_methods_with_py.test">Setup and Teardown Methods With Py.test</a></li>
+        
+            <li>2011-05-03 - <a href="http://anders.conbere.org/blog/2011/05/03/igor_design_part_2">Igor Design Part 2</a></li>
+        
+            <li>2011-05-03 - <a href="http://anders.conbere.org/blog/2011/05/03/learning_to_program_is_easy">Learning to Program is Easy</a></li>
+        
+            <li>2011-05-03 - <a href="http://anders.conbere.org/blog/2011/05/03/atom_feeds_for_igor..._difficult">Atom feeds for igor... difficult</a></li>
+        
+            <li>2011-05-03 - <a href="http://anders.conbere.org/blog/2011/05/03/get_xmpp_-_bosh_working_with_ejabberd_firefox_and_strophe">Get XMPP - BOSH working with Ejabberd, Firefox and Strophe</a></li>
+        
+            <li>2009-02-16 - <a href="http://anders.conbere.org/blog/2009/02/16/deploying_wsgi_applications_behind_nginx">Deploying wsgi applications behind Nginx</a></li>
+        
+            <li>2008-08-06 - <a href="http://anders.conbere.org/blog/2008/08/06/building_ejabberd_modules_-_part_4_-_xmpp_bots">Building Ejabberd Modules - Part 4 - XMPP Bots</a></li>
+        
+            <li>2008-07-31 - <a href="http://anders.conbere.org/blog/2008/07/31/building_ejabberd_modules_-_part_3_-_http_modules">Building Ejabberd Modules - Part 3 - HTTP Modules</a></li>
+        
+        </ol>
+
+        <p><a href="http://anders.conbere.org/blog/archive/">More Posts This Way -></a></p>
+    </div>
+</div>
+
+
+
+    <div id="footer">
+        
+        <p>Generated with love by <a href="http://github.com/aconbere/igor/">Igor</a></p>
+        
+    </div>
+
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-2522671-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+        <title>Anders Conbere's 
+Meat Flappings - My Problems With PHP
+</title>
+        <link rel="alternate" type="application/atom+xml" href="feed.atom" title="Meat Flappings - Feed">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/base.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/reset.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/main.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/fonts.css">
+</head>
+
+<body>
+    <div id="header">
+        
+        <h3><a href="/">&lt;- Take me home</a></h3>
+        <h1><a href="http://anders.conbere.org/blog/">Meat Flappings</a></h1>
+        
+    </div>
+
+    <div id="content">
+        
+<div class="post">
+    
+    <div class="meta">
+        <h3 id="document_title"><a href="http://anders.conbere.org/blog/2007/01/29/my_problems_with_php">My Problems With PHP</a></h3>
+        <p>Published on: <span class="published_on">2007-01-29 by Anders Conbere</span></p>
+    </div>
+    <div class="post_body">
+    <p>I've thought up a small list of things that bug me about PHP, things they could do better in future releases, things that they could adopt from other languages. When using PHP extensively you get a feeling of how it was designed, incrementally over a broad period of time without a particular vision or direction. This isn't irreparable, but it does make the language less enjoyable to code in.</p>
+<ol>
+<li>
+<p>Namespace collisions and include functions (see point 2 and 5)</p>
+<p>When you go to include a PHP file into another one (because sometimes those files just get to be too big to mess with) if that file has within it function definitions or variables with the same name... it just overwrites them, is overwritten by them. There isn't as far as I can tell any namespace collision detection, and no way to import that file as a module in and of itself.  That is, as an object from which everything within it could be referenced.</p>
+</li>
+<li>
+<p>Not fully object oriented</p>
+<p>This is something I've grown to love in dynamic languages, I love types being objects and the kind of common sense that comes with the methods attached to types.  If I want to know how many times the letter "x" shows up in string "y" <code>y.count('x')</code> is beautiful.</p>
+</li>
+<li>
+<p>Language consistency</p>
+<p>A language should seek to be as standard with it's naming conventions as possible.  Settle on one, camel case, or use underscores or '-'s, use verb noun, or noun verb. just pick one and stick with it!!</p>
+</li>
+<li>
+<p>Large body of core functions</p>
+<p>PHP feels a bit cluttered and just about anything seems to be able to get into it's core set of functions.  Not everyone needs LDAP functions. why not just make a nice and simple LDAP module for those who need it, and let the rest of us be rid of it. Most likely this is a result of point 5.</p>
+</li>
+<li>
+<p>Modularity not built in</p>
+</li>
+</ol>
+<p>PHP doesn't feel like anyone thought of modularity when it was being designed.  Look at ruby or python for examples of this awesomeness.  Sure it's got the pear repository, but even that's somewhat limited.  I strongly believe that a good language should have a small definition (scheme is only just over 50 pages for the entire language) with it's power coming from modularity.  That requires that new modules not stomp on namespaces, have an easy way to import them to an object, and an easy way to add or remove modules.</p>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+    <div id="footer">
+        
+        <p>Generated with love by <a href="http://github.com/aconbere/igor/">Igor</a></p>
+        
+    </div>
+
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-2522671-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+    
+    
+    
+</body>
+</html>

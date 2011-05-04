@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+        <title>Anders Conbere's 
+Meat Flappings - Scaling web applications
+</title>
+        <link rel="alternate" type="application/atom+xml" href="feed.atom" title="Meat Flappings - Feed">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/base.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/reset.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/main.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/fonts.css">
+</head>
+
+<body>
+    <div id="header">
+        
+        <h3><a href="/">&lt;- Take me home</a></h3>
+        <h1><a href="http://anders.conbere.org/blog/">Meat Flappings</a></h1>
+        
+    </div>
+
+    <div id="content">
+        
+<div class="post">
+    
+    <div class="meta">
+        <h3 id="document_title"><a href="http://anders.conbere.org/blog/2008/06/07/scaling_web_applications">Scaling web applications</a></h3>
+        <p>Published on: <span class="published_on">2008-06-07 by Anders Conbere</span></p>
+    </div>
+    <div class="post_body">
+    <p>I just got back from a fantastic excursion to LA where I met with <a href="http://romeda.org/">Blaine Cook</a> and Adam Pisoni (and others from <a href="http://geni.com">Geni</a> about a new product their releasing and how to use XMPP in that context and further how to scale it. This is pretty interesting to me because while I was brought in to talk about XMPP primarily, I've been dealing with scaling <a href="http://fidgt.com">Fidgt</a> the last month so all these problems are fresh in my mind. The whole two days of meeting flashed by, an unbelievable amount of diagramming, discussing, debating, arguing, and reworking went on with very little code (way cool). It got me thinking that maybe this is how healthy teams at healthy companies work and that maybe I should try that out sometime :-D</p>
+<p>Lessons</p>
+<hr />
+<ul>
+<li>
+<p>Yes massive queuing is the way to go.</p>
+</li>
+<li>
+<p>Aggregating results is far more costly than inserting data.</p>
+</li>
+<li>
+<p>Denormalization is a must.</p>
+</li>
+<li>
+<p>Memcache is near to god.</p>
+</li>
+<li>
+<p>There's something ugly and yet utilitarian about XMPP components (investigate further)</p>
+</li>
+<li>
+<p>BOSH/Comet are interesting tools for the hack that is AJAX, complicated plus and minuses</p>
+</li>
+</ul>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+    <div id="footer">
+        
+        <p>Generated with love by <a href="http://github.com/aconbere/igor/">Igor</a></p>
+        
+    </div>
+
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-2522671-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+    
+    
+    
+</body>
+</html>

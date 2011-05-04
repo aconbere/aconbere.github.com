@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+        <title>Anders Conbere's 
+Meat Flappings - Deploying wsgi applications behind Nginx
+</title>
+        <link rel="alternate" type="application/atom+xml" href="feed.atom" title="Meat Flappings - Feed">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/base.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/reset.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/main.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/fonts.css">
+</head>
+
+<body>
+    <div id="header">
+        
+        <h3><a href="/">&lt;- Take me home</a></h3>
+        <h1><a href="http://anders.conbere.org/blog/">Meat Flappings</a></h1>
+        
+    </div>
+
+    <div id="content">
+        
+<div class="post">
+    
+    <div class="meta">
+        <h3 id="document_title"><a href="http://anders.conbere.org/blog/2009/02/16/deploying_wsgi_applications_behind_nginx">Deploying wsgi applications behind Nginx</a></h3>
+        <p>Published on: <span class="published_on">2009-02-16 by Anders Conbere</span></p>
+    </div>
+    <div class="post_body">
+    <p>There's a fine line in the world of web frameworks, if you dictate too many choices in for your users, they loose the ability to carry in knowledge they might already have, they feel constrained, and you dictate what can be accomplished. If you let things fly free, the number of choices crushes the developers ability to be productive. Werkzeug clearly lands more on the former, but helps bridge that gap with a great set of documentation, that lays out a clear path forward. The choices are there for you to make, but if you want to get going, the dev team there has provided you with a great set of defaults, and clear documentation on how to utilize them.</p>
+<p>One place that the documentation for Werkzeug has lacked is on the topic of deployment. This was amended with the <a href="http://werkzeug.pocoo.org/documentation/deploying">latest release</a> but still didn't cover my use case, or at least didn't go into the amount of detail I would expect from deployment documentation. So I thought I would cover how I use Werkzeug in my deployed applications.</p>
+<p>As a brief overview, I like to deploy my applications with <a href="http://peak.telecommunity.com/DevCenter/EasyInstall">easy_install</a> behind <a href="http://wiki.codemongers.com/Main">Nginx</a>, using <a href="http://pythonpaste.org/script/">Paster Serve</a> as my application host.</p>
+<h3>Creating a setup.py install script</h3>
+<pre><code>from setuptools import setup, find_packages
+
+setup(name='werkzeug_app',
+    version='0.1',
+    description='werkzeug_app',
+    author='Anders Conbere',
+    author_email='aconbere@gmail.com',
+    url='http://anders.conbere.org/',
+    packages=find_packages(),
+    package_data = {'werkzeug_app': ['templates/*']},
+    classifiers=['Development Status :: 1 - Alpha',
+                 'Environment :: Web Environment',
+                 'Intended Audience :: Developers',
+                 'Operating System :: OS Independent',
+                 'Programming Language :: Python',
+                 'Topic :: Utilities'],
+
+    install_requires = [
+        "Werkzeug &gt; 0.4.0",
+        "Jinja2 &gt;= 2.0",
+        "SQLAlchemy &gt;= 0.5.0",
+        "Paste &gt;= 1.7.0",
+        "PasteDeploy &gt;= 1.3.0",
+        "PasteScript &gt;= 1.7.0",
+        "simplejson &gt;= 2.0.0",
+        "WTForms &gt;= 0.3.1",
+        ],
+
+    entry_points={
+        'paste.app_factory': [
+            'main=werkzeug_app.application:app_factory',
+            ],
+        },
+      )
+</code></pre>
+<p>This does a couple of things, that are nice for deploying. It defines my dependencies, and automatically installs them for me when I run the script. It set's up an entry point for Paster to grab onto later, and attaches some simple metadata about the application to it.</p>
+<p>To install your app, now all you have to do is run</p>
+<pre><code>$&gt; sudo python setup.py install
+</code></pre>
+<h3>Building a Paster config for running your app</h3>
+<p>In order to have Paster run out servers we need to give it some basic configuration parameters.</p>
+<pre><code>[server:main]
+    use = egg:Paste#http
+    host = 0.0.0.0
+    port = 8090
+    use_threadpool = True
+    threadpool_workers = 10
+
+[app:main]
+    use = egg:werkzeug_app
+    db_uri = sqlite:////var/db/werkzeug_app/werkzeug_app.db
+</code></pre>
+<p>It should be relatively clear from this what's going on. The first set of config params sets up how our server works, defines the IP it binds to and a Port. The second set tells Paster where to find our code. Since we installed our app using easy_install as an egg, we need to tell Paster to look for that. On top of that we can pass extra data to our application at this point, so I choose to send in my database path as part of the config.</p>
+<p>If you wanted to run many of these servers to load balance you would simply need to copy the two sets of configs for the "main" app, and give it a new name like "main2", and give that app a new ip or port to bind to. They could then be started separately.</p>
+<p>These apps can then be run by issuing the paster serve command</p>
+<pre><code>$&gt; paster serve developemnt.ini --daemon
+$&gt; paster serve -n main2 developement.ini --daemon
+</code></pre>
+<h3>Setting up Nginx to point back to your paster servers</h3>
+<p>I use the following simple Nginx config (this is probably not the best nginx config ever I just don't bother much with it).</p>
+<pre><code>worker_processes  2;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    client_body_timeout   5;
+    client_header_timeout 5;
+    keepalive_timeout     5 5;
+    send_timeout          5;
+    tcp_nodelay on;
+    tcp_nopush  on;
+
+    upstream werkzeug_apps {
+        server localhost:8090;
+        server localhost:8091;
+    }
+
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            proxy_pass http://werkzeug_apps;
+            proxy_redirect default;
+        }
+    }
+}
+</code></pre>
+<p>once again, you can run this by starting nginx, which can be invoked by running</p>
+<pre><code>$&gt; nginx -c nginx.conf
+</code></pre>
+<h3>Breathe deeply and think about how awesome you are</h3>
+<p>seriously, you rule! And now you not only rule, but have nginx hosting your werkzeug app as well.</p>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+    <div id="footer">
+        
+        <p>Generated with love by <a href="http://github.com/aconbere/igor/">Igor</a></p>
+        
+    </div>
+
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-2522671-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+    
+    
+    
+</body>
+</html>

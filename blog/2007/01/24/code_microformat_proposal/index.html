@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+        <title>Anders Conbere's 
+Meat Flappings - Code Microformat Proposal
+</title>
+        <link rel="alternate" type="application/atom+xml" href="feed.atom" title="Meat Flappings - Feed">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/base.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/reset.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/main.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/fonts.css">
+</head>
+
+<body>
+    <div id="header">
+        
+        <h3><a href="/">&lt;- Take me home</a></h3>
+        <h1><a href="http://anders.conbere.org/blog/">Meat Flappings</a></h1>
+        
+    </div>
+
+    <div id="content">
+        
+<div class="post">
+    
+    <div class="meta">
+        <h3 id="document_title"><a href="http://anders.conbere.org/blog/2007/01/24/code_microformat_proposal">Code Microformat Proposal</a></h3>
+        <p>Published on: <span class="published_on">2007-01-24 by Anders Conbere</span></p>
+    </div>
+    <div class="post_body">
+    <p>This has been published at least once to the best of my knowledge with very little follow up so for reference:</p>
+<ol>
+<li>
+<p><a href="http://microformats.org/discuss/mail/microformats-discuss/2005-June/000019.html">June 2005</a></p>
+</li>
+<li>
+<p><a href="http://microformats.org/discuss/mail/microformats-discuss/2005-July/000115.html">July 2005</a></p>
+</li>
+</ol>
+<p>To bring this up again, I think that a compact microformat for dealing with blocks of code in (x)html could bring a lot to the development communities.  Not only would we be able to have a single standard format for embedding code examples in our webpages, but we could also store important and often times difficult to find data such as licenses, original authors, sets of authors, language, language version, etc.</p>
+<h2>Examples</h2>
+<ol>
+<li>
+<p>sites that make use of code blocks with metadata attached</p>
+<ul>
+<li>
+<p><a href="http://www.bigbold.com/snippets/">bigbold snippets</a></p>
+</li>
+<li>
+<p><a href="http://www.phpbuilder.com/snippet/">phpbuilder.com</a></p>
+</li>
+<li>
+<p><a href="http://code.djangoproject.com/">code.djangoproject.com</a></p>
+</li>
+<li>
+<p><a href="http://www.phpclasses.org/browse/package/1702.html">phpclasses</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Common metadata used</p>
+<ul>
+<li>
+<p>Author</p>
+</li>
+<li>
+<p>Author's Webpage</p>
+</li>
+<li>
+<p>Title of Package</p>
+</li>
+<li>
+<p>Description</p>
+</li>
+<li>
+<p>Language</p>
+</li>
+<li>
+<p>Language Version</p>
+</li>
+<li>
+<p>License</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>Typical use of code in these sites is either large text wrapped in <code>&lt;p&gt;</code> tags, or <code>&lt;pre&gt;</code> tags. With included text ranging anywhere from a few lines to a page or so.  Often times licenses and users are included in the code block as comments of that particular language, sometimes mentioned in the page, sometimes not mentioned at all.</p>
+<h2>Schema</h2>
+<p>The hCode schema might consists of the following:</p>
+<h3>hCode</h3>
+<ul>
+<li>
+<p>title. optional. text.</p>
+</li>
+<li>
+<p>description. optional text.</p>
+</li>
+<li>
+<p>author(s). required. Must use hCard.</p>
+</li>
+<li>
+<p>license(s). optional. text.</p>
+</li>
+<li>
+<p>language. required. text.</p>
+</li>
+<li>
+<p>language-version. optional. text.</p>
+</li>
+</ul>
+<h2>Field details</h2>
+<p>The fields of the hCode schema would represent the following</p>
+<h3>fields</h3>
+<ul>
+<li>
+<p>hCode:: root class name</p>
+</li>
+<li>
+<p>title:: The class name title is used to designate the name of the name given to this block of code. </p>
+</li>
+<li>
+<p>description:: The class name description is used give a breif description of the function of the code. </p>
+</li>
+<li>
+<p>author:: Current contact info in a list of hCards.</p>
+</li>
+<li>
+<p>license:: rel="license" and link to the appropriate license.</p>
+</li>
+<li>
+<p>license-inline:: The class name license-inline is used to indicate a non-standard, or write a specific license inline.</p>
+</li>
+<li>
+<p>language:: the class name language is used to designate the the programming language code was written in.</p>
+</li>
+<li>
+<p>language-version:: the class name language-version is used to designate the version of the programming language used.</p>
+</li>
+</ul>
+<p>see <a href="http://microformats.org/wiki/code-examples">code-examples</a></p>
+<p>and <a href="http://microformats.org/wiki/code-brainstorming">code-brainstorming</a> for further discussion.</p>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+    <div id="footer">
+        
+        <p>Generated with love by <a href="http://github.com/aconbere/igor/">Igor</a></p>
+        
+    </div>
+
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-2522671-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+        <title>Anders Conbere's 
+Meat Flappings - Atom feeds for igor... difficult
+</title>
+        <link rel="alternate" type="application/atom+xml" href="feed.atom" title="Meat Flappings - Feed">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/base.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/reset.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/main.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/fonts.css">
+</head>
+
+<body>
+    <div id="header">
+        
+        <h3><a href="/">&lt;- Take me home</a></h3>
+        <h1><a href="http://anders.conbere.org/blog/">Meat Flappings</a></h1>
+        
+    </div>
+
+    <div id="content">
+        
+<div class="post">
+    
+    <div class="meta">
+        <h3 id="document_title"><a href="http://anders.conbere.org/blog/2011/05/03/atom_feeds_for_igor..._difficult">Atom feeds for igor... difficult</a></h3>
+        <p>Published on: <span class="published_on">2011-05-03 by Anders Conbere</span></p>
+    </div>
+    <div class="post_body">
+    <p>The first problem was actually reading the atom specs which I had neglected to do. Most of my previous work with atom had been in either creating elements used in various locations (Google data is all passed as Atom elements, as well as moments of injecting atom elements into xmpp streams). So I cobbled together what I thought was a decent first attempt at a Jinja template for building the atom file, published it and redirected my browser there... only to see nothing.</p>
+<p>The XML was being generated, but not parsed.</p>
+<p>The problems left were:</p>
+<ul>
+<li>writing out dates in RFC:3339 format</li>
+<li>building correct id's for elements</li>
+</ul>
+<p>for RFC 3339 I found a <a href="http://henry.precheur.org/projects/rfc3339.html">nice python library</a> in the public domain for producing the correct format from a datetime object. To you <a href="http://henry.precheur.org/">Henry Precheur</a> I am quite grateful.</p>
+<p>Generating correct id's was a little more tricky. First I tried generating uuid's but upon reading Mark Pilgrims post on <a href="http://diveintomark.org/archives/2004/05/28/howto-atom-id">atom element id's</a> I ended up writing a small function to generate tag: urns based on the time when a post was published (I'm not sure this is a /good/ solution given that I'm working with version control systems and you might legitimately have many articles published at the same time).</p>
+<p>In the end I'm fairly content with the result, it required a morning's effort, more time than I had wanted to devote to atom publishing, but still successful.</p>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+    <div id="footer">
+        
+        <p>Generated with love by <a href="http://github.com/aconbere/igor/">Igor</a></p>
+        
+    </div>
+
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-2522671-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+    
+    
+    
+</body>
+</html>
