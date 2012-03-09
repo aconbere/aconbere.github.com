@@ -15,8 +15,7 @@ skills:
     - "Erlang": ["Ejabberd", "RabbitMQ", "MochiWeb"]
     - "Haskell": ["HOpenGL"]
     - "Ruby": ["EventMachine", "Rack", "Rails"]
-    - "Javascript": ["Google Maps", "Rich Applications", "BOSH"]
-    - "Scheme"
+    - "Javascript": ["Google Maps", "Node", "BOSH"]
 
     platforms:
     - "Unix": ["Linux", "Solaris", "OS X", "FreeBSD"]
@@ -30,6 +29,19 @@ education:
     end: "2006-01"
     
 experience:
+- job:
+    title: "Lead Software Engineer"
+    start: "2011-2012"
+    location: "Chicago, IL"
+
+    company: 
+        name: "Obama For America"
+        website: "http://www.barackobama.com"
+
+    duties:
+    - "Lead development of services API"
+    - "Key position in designing the middleware architecture used to provide foundation of future web development work at the Obama campaign."
+
 - job:
     title: "Software Developer"
     start: "2009-2011"
