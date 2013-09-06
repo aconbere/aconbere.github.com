@@ -1,34 +1,38 @@
 name: "Anders Conbere"
-email: "aconbere@gmail.com"
+email: "aconbere@conbere.org"
 telephone: "707.968.7853"
 website: "http://anders.conbere.org"
+github: "https://github.com/aconbere"
 
 address:
-    street: "1243 W Rosemont Ave"
-    city: "Chicago"
-    state: "Illinois"
-    zip: 60660
-
-skills:
-    programming_languages:
-    - "Python": ["WSGI", "Twisted", "Django"]
-    - "Erlang": ["Ejabberd", "RabbitMQ", "MochiWeb"]
-    - "Haskell": ["HOpenGL"]
-    - "Ruby": ["EventMachine", "Rack", "Rails"]
-    - "Javascript": ["Google Maps", "Node", "BOSH"]
-
-    platforms:
-    - "Unix": ["Linux", "Solaris", "OS X", "FreeBSD"]
+    street: "4826 12th Ave S"
+    city: "Seattle"
+    state: "Wa"
+    zip: 98108
 
 education:
-- item:
     school: "Western Washington University"
     location: "Bellingham, Wa"
-    degree: ["BS Mathematics", "Minor Physics"]
+    degree: "BS Mathematics"
     start: "2001-09"
     end: "2006-01"
     
 experience:
+- job:
+    title: "Senior Software Engineer"
+    start: "2012-2013"
+    location: "New York, New York"
+
+    company: 
+        name: "Etsy"
+        website: "http://etsy.com"
+
+    duties:
+        - "Introduced international Monetary framework"
+        - "Build improvements to big data stack"
+        - "Built new coupon features top support seller requests"
+        - "Rebuild a system for managing customer feedback"
+
 - job:
     title: "Lead Software Engineer"
     start: "2011-2012"
@@ -39,12 +43,13 @@ experience:
         website: "http://www.barackobama.com"
 
     duties:
-    - "Lead development of services API"
-    - "Key position in designing the middleware architecture used to provide foundation of future web development work at the Obama campaign."
+        - "Lead a team of 3 to 4 engineers in development of the primary services API for the campaign."
+        - "Designed the middleware architecture used to provide foundation of future web development work at the Obama campaign."
 
 - job:
     title: "Software Developer"
-    start: "2009-2011"
+    start: "2009"
+    end: "2011"
     location: "Seattle, Wa"
 
     company: 
@@ -52,13 +57,13 @@ experience:
         website: "http://estately.com"
 
     duties:
-    - "Architected Client Side Google Maps Application"
-    - "Maintenance and improvement of the existing Rails infrastructure"
+        - "Architected Client Side Google Maps Application, serving as the main user interface to searching for homes."
+        - "Maintenance and improvement of the existing Rails infrastructure"
 
 - job:
     title: "Software Developer"
-    start: "2008-09"
-    end: "2009-07"
+    start: "2008"
+    end: "2009"
     location: "Seattle, Wa"
 
     company: 
@@ -66,65 +71,22 @@ experience:
         website: "http://joyent.com"
 
     duties:
-    - "Designed a workflow description framework for doing distributed computations."
-    - "Built an OAuth provider to handle authorization for front end api's coupled with an internal python OAuth library designed to be more flexible with our internal data structures."
-    - "Wrote several components of Joyent's smart platform including AMQP workers for distributing git repository management, and rewriting parts of gitosis."
-
-- job:
-    title: "Consultant / Developer"
-    start: "2008-06"
-    end: "2009-08"
-    location: "Los Angeles, Ca"
-
-    company: 
-        name: "Geni"
-        website: "http://geni.com"
-
-    duties:
-    - "Developed a custom Erlang authentication module for use with Ejabberd."
-    - "Consultant on use of Ejabberd, XMPP and building scalable real time systems."
-
-- job:
-    title: "Co-Founder"
-    start: "2008-06"
-    end: "2009-07"
-    location: "Seattle, Wa"
-
-    company: 
-        name: "Giraffe Labs"
-        website: "http://giraffelabs.com"
-
-    duties:
-    - "Ran and managed a small independent co-working facility."
-    - "Achieved profitability in the first month."
-    - "Provided a fun, relaxed, and productive atmosphere for over 18 members."
-
-- job:
-    title: "Consultant / Developer"
-    start: "2007-12"
-    end: "2008-09"
-    location: "Los Angeles, Ca"
-
-    company: 
-        name: "Protomobl"
-        website: "http://protomobl.com"
-
-    duties:
-    - "Helped produce an architectural road map for moving forward with new development on fidgt.com."
-    - "Developed core systems for retrieving social network data written in Erlang and Python."
+        - "Designed a workflow description framework for doing distributed computations."
+        - "Built an OAuth provider to handle authorization for front end api's coupled with an internal python OAuth library designed to be more flexible with our internal data structures."
+        - "Wrote several components of Joyent's smart platform including AMQP workers for distributing git repository management, and rewriting parts of gitosis."
 
 - job:
     title: "Systems Engineer"
     location: "Seattle, Wa"
-    start: "2007-06"
-    end: "2008-02"
+    start: "2007"
+    end: "2008"
 
     company:
         name: "Microsoft"
         website: "http://microsoft.com"
 
     duties:
-      - "Facilitate the release of software services."
-      - "Maintain healthy system environments."
-      - "Work as an intermediary between the various teams in order to best facilitate the release of, and provide the best level of support for our software."
+        - "Facilitate the release of software services."
+        - "Maintain healthy system environments."
+        - "Work as an intermediary between the various teams in order to best facilitate the release of, and provide the best level of support for our software."
 
