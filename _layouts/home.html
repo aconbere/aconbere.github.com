@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title>{{ page.title }}</title>
+  <link rel="alternate" type="application/atom+xml" href="feed.atom" title="Meat Flappings - Feed">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/base.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/reset.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/main.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="http://anders.conbere.org/media/css/fonts.css">
+</head>
+
+<body>
+  <div id="header">
+    <h3><a href="/">&lt;- Take me home</a></h3>
+    <h1><a href="http://anders.conbere.org/blog/">Meat Flappings</a></h1>
+  </div>
+
+  <div id="content">
+    <div class="post"> 
+      {% for post in site.posts | limit 1 %}
+
+      {% endfor %}
+    </div>
+  </div>
+
+    
+  <div id="posts-list">
+    <div class="posts-list-inner">
+      <ol>
+        {% for post in site.posts %}
+          <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+
+  <div id="footer">
+    <p>
+      <a href="/resume.yml">Resume</a> &raquo; <a href="http://twitter.com/aconbere">Twitter</a> &raquo; <a href="http://github.com/aconbere">Github</a>
+    </p>
+  </div>
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-2522671-1");
+      pageTracker._trackPageview();
+    } catch(err) {}
+  </script>
+
+</body>
+</html>

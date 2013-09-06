@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Anders Conbere's Meat Flappings - {{ page.title }}</title>
+  <link rel="stylesheet" href="/media/css/syntax.css">
+  <link rel="stylesheet" href="/media/css/base.css">
+  <link rel="stylesheet" href="/media/css/reset.css">
+  <link rel="stylesheet" href="/media/css/main.css">
+  <link rel="stylesheet" href="/media/css/fonts.css">
+</head>
+
+<body>
+  <div id="header">
+    <h3><a href="/">&lt;- Take me home</a></h3>
+    <h1><a href="/blog/">{{ site.name }}</a></h1>
+  </div>
+
+  <div id="content">
+    <div class="post">
+      {{ content }}
+    </div>
+  </div>
+
+  <div id="footer">
+    <p>
+      <a href="/resume.yml">Resume</a> &raquo; <a href="http://twitter.com/aconbere">Twitter</a> &raquo; <a href="http://github.com/aconbere">Github</a>
+    </p>
+  </div>
+
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-2522671-1");
+    pageTracker._trackPageview();
+    } catch(err) {}
+  </script>
+</body>
+</html>
