@@ -2,6 +2,7 @@ a {
     color: #333;
     text-decoration: none;
 }
+
 a:visited {
     color: #777;
 }
@@ -120,11 +121,6 @@ li {
     text-align: justify;
 }
 
-.post_body p:first-child:first-letter {
-    font-family: "Kulminoituva", helvetica, sans-serif;
-    font-size: 3em;
-}
-
 .post_body a {
     text-decoration: underline;
 }
@@ -146,8 +142,8 @@ li {
     padding: 30px;
 }
 
-#disqus_thread {
-    margin-top: 30px;
+.posts-list-inner ol li {
+  list-style: none;
 }
 
 #footer a {
