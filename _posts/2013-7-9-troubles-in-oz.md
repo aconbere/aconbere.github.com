@@ -1,4 +1,8 @@
-# Monads - Why should I care?
+---
+layout: post
+title: Monads: Tools for everyday programming
+---
+# Monads - Tools for everyday programming
 
 At the first mention of Monads, even some of the most experienced engineers I know will turn into a clam shouting *blah* *blah* *blah* with their fingers in their ears. On the face of it this is a rather silly behavior, considering that these same engineers don't shy at the sight of other complicated programmatic abstractions. But I understand this reaction, Monads have long been the right of passage for young haskelers and they have had a tendency to shout the acquisition of this newfound knowledge to the stars. In many programmers' eyes this has bound Monads to Haskell. How unfair! After all, we don't relegate all functional programming to the trash bin because of the peculiarities of the Haskell community. Instead, let's try to understand what makes this structure so prevalent and why it's a useful abstraction.
 
