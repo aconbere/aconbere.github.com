@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Monads: Tools for everyday programming
+title: Monads - Tools for everyday programming
 ---
 
 # Monads - Tools for everyday programming
