@@ -1,3 +1,5 @@
+{% assign post = site.posts.first %}
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
     "http://www.w3.org/TR/html4/strict.dtd">
 
@@ -20,9 +22,8 @@
 
   <div id="content">
     <div class="post"> 
-      {% for post in site.posts | limit 1 %}
-
-      {% endfor %}
+      <h2><a href="{{post.url}}">{{ post.title}}</a></h2>
+      <p>{{ post.excerpt }}</p>
     </div>
   </div>
 
