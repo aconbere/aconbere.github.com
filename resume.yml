@@ -20,7 +20,8 @@ education:
 experience:
 - job:
     title: "Senior Software Engineer"
-    start: "2012-2013"
+    start: "2012"
+    end: "2013"
     location: "New York, New York"
 
     company: 
@@ -35,7 +36,8 @@ experience:
 
 - job:
     title: "Lead Software Engineer"
-    start: "2011-2012"
+    start: "2011"
+    end: "2012"
     location: "Chicago, IL"
 
     company: 
