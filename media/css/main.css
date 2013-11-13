@@ -35,7 +35,7 @@ blockquote {
     font-size: 1em;
 }
 
-ul {
+ul, ol {
     padding-bottom: 20px;
 }
 

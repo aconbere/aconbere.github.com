@@ -27,8 +27,7 @@
         <p>Published on: <span class="published_on">{{ post.date | date_to_string }}</span> by {{ site.author }}</p>
       </div>
       <div class="post_body">
-        {{ post.excerpt }}
-        <a href="{{ post.url }}">read more ...</a>
+        {{ post.content }}
       </div>
     </div>
   </div>
