@@ -14,8 +14,9 @@ education:
     school: "Western Washington University"
     location: "Bellingham, Wa"
     degree: "BS Mathematics"
-    start: "2001-09"
-    end: "2006-01"
+    minor: "Physics"
+    start: "2001"
+    end: "2006"
     
 experience:
 - job:
@@ -29,10 +30,10 @@ experience:
         website: "http://etsy.com"
 
     duties:
-        - "Introduced international Monetary framework"
-        - "Build improvements to big data stack"
-        - "Built new coupon features top support seller requests"
-        - "Rebuild a system for managing customer feedback"
+        - "Introduced international Monetary framework acts as a foundation to Etsy's new internal payments product."
+        - "Rebuilt international language detection on a simple signals framework. Results were slightly better but with one quarter the amount of code."
+        - "Brought in standard build tools dropping average scalding build times from 10 minutes to several seconds."
+
 
 - job:
     title: "Lead Software Engineer"
@@ -46,7 +47,9 @@ experience:
 
     duties:
         - "Lead a team of 3 to 4 engineers in development of the primary services API for the campaign."
-        - "Designed the middleware architecture used to provide foundation of future web development work at the Obama campaign."
+        - "Principle engineer of the middleware architecture used to provide foundation of future web development work at the Obama campaign."
+        - "Code reviews and release management to ensure stability."
+        - "Work with multiple teams and consumers to provide a robust system of tools and apis to access internal data via the api."
 
 - job:
     title: "Software Developer"
@@ -73,22 +76,6 @@ experience:
         website: "http://joyent.com"
 
     duties:
-        - "Designed a workflow description framework for doing distributed computations."
+        - "Designed a workflow description framework in Erlang for doing distributed computations."
         - "Built an OAuth provider to handle authorization for front end api's coupled with an internal python OAuth library designed to be more flexible with our internal data structures."
         - "Wrote several components of Joyent's smart platform including AMQP workers for distributing git repository management, and rewriting parts of gitosis."
-
-- job:
-    title: "Systems Engineer"
-    location: "Seattle, Wa"
-    start: "2007"
-    end: "2008"
-
-    company:
-        name: "Microsoft"
-        website: "http://microsoft.com"
-
-    duties:
-        - "Facilitate the release of software services."
-        - "Maintain healthy system environments."
-        - "Work as an intermediary between the various teams in order to best facilitate the release of, and provide the best level of support for our software."
-
