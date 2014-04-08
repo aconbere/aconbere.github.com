@@ -17,6 +17,22 @@ education:
     minor: "Physics"
     start: "2001"
     end: "2006"
+
+experience:
+- job:
+    title: "Senior Software Engineer"
+    start: "2013"
+    end: "present"
+    location: "New York, New York"
+
+    company: 
+        name: "Upworthy"
+        website: "http://upworthy.com"
+
+    duties:
+      - "Built a high throughput low latency analytics platform on top of kinesis"
+      - "Built eventing, logging, and monitoring infrastructure to support analytics"
+
     
 experience:
 - job:
@@ -30,10 +46,9 @@ experience:
         website: "http://etsy.com"
 
     duties:
-        - "Introduced international Monetary framework acts as a foundation to Etsy's new internal payments product."
+        - "Introduced an international Monetary framework acting as a foundation to Etsy's new internal payments product."
         - "Rebuilt international language detection on a simple signals framework. Results were slightly better but with one quarter the amount of code."
-        - "Brought in standard build tools dropping average scalding build times from 10 minutes to several seconds."
-
+        - "Helped maintain scala and scalding based hadoop infrastructure. Brought in standard build tools."
 
 - job:
     title: "Lead Software Engineer"
