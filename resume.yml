@@ -20,20 +20,21 @@ education:
 
 experience:
 - job:
-    title: "Senior Software Engineer"
+    title: "Engineering Manager"
     start: "2013"
     end: "present"
-    location: "New York, New York"
+    location: "Seattle, WA"
 
     company: 
         name: "Upworthy"
-        website: "http://upworthy.com"
+        website: "http://www.upworthy.com"
 
     duties:
-      - "Built a high throughput low latency analytics platform on top of kinesis"
-      - "Built eventing, logging, and monitoring infrastructure to support analytics"
+        - "Managed a team of three engineers predominantly to support our analytics infrastructure."
+        - "Worked with my team to build a high throughput low latency analytics platform on top of kinesis."
+        - "Worked with my team to bring autoscaling to our web application nearly eliminating website downtime."
+        - "Built a feature flags systems to reduce the risk and improve the quality of new features shipped to production."
 
-    
 experience:
 - job:
     title: "Senior Software Engineer"
@@ -93,4 +94,4 @@ experience:
     duties:
         - "Designed a workflow description framework in Erlang for doing distributed computations."
         - "Built an OAuth provider to handle authorization for front end api's coupled with an internal python OAuth library designed to be more flexible with our internal data structures."
-        - "Wrote several components of Joyent's smart platform including AMQP workers for distributing git repository management, and rewriting parts of gitosis."
+        - "Wrote several components of Joyent's smart platform including AMQP workers for distributing git repository management."
