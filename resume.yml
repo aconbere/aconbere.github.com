@@ -21,8 +21,34 @@ education:
 experience:
 - job:
     title: "Engineering Manager"
-    start: "2013"
+    start: "2016"
     end: "present"
+    location: "Seattle, WA"
+
+    company: 
+        name: "Stripe"
+        website: "http://stripe.com"
+
+    duties:
+        - "Managed a team of four engineers on the infrastructure team responsible for our high security card holder environment."
+- job:
+    title: "Software Engineeer"
+    start: "2016"
+    end: "2018"
+    location: "Seattle, WA"
+
+    company: 
+        name: "Stripe"
+        website: "http://stripe.com"
+
+    duties:
+        - "Lead a team that built a transactional cost model in scalding responsible for booking 50% of revenue with four 9's of accuracy."
+        - "Helped build a tool that safely redacts incoming documents for work on merchant imports."
+        - "Helped build a new batch api for stripe merchants who needed offline processing."
+- job:
+    title: "Engineering Manager"
+    start: "2013"
+    end: "2016"
     location: "Seattle, WA"
 
     company: 
