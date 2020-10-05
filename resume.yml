@@ -4,24 +4,10 @@ telephone: "707.968.7853"
 website: "http://anders.conbere.org"
 github: "https://github.com/aconbere"
 
-address:
-    street: "4826 12th Ave S"
-    city: "Seattle"
-    state: "Wa"
-    zip: 98108
-
-education:
-    school: "Western Washington University"
-    location: "Bellingham, Wa"
-    degree: "BS Mathematics"
-    minor: "Physics"
-    start: "2001"
-    end: "2006"
-
 experience:
 - job:
     title: "Engineering Manager"
-    start: "2016"
+    start: "2017"
     end: "present"
     location: "Seattle, WA"
 
@@ -30,11 +16,12 @@ experience:
         website: "http://stripe.com"
 
     duties:
-        - "Managed a team of four engineers on the infrastructure team responsible for our high security card holder environment."
+        - "Managed a team of twelve engineers on the infrastructure team responsible for our high security card holder environment. Delivered successful PCI audits every half. Built a deployment system that enabled end to end validation of deploy artifacts based on individual keys enable automated infrastructure while maintaining chain of custody for all artifacts."
+
 - job:
     title: "Software Engineeer"
     start: "2016"
-    end: "2018"
+    end: "2017"
     location: "Seattle, WA"
 
     company: 
@@ -42,9 +29,10 @@ experience:
         website: "http://stripe.com"
 
     duties:
-        - "Lead a team that built a transactional cost model in scalding responsible for booking 50% of revenue with four 9's of accuracy."
-        - "Helped build a tool that safely redacts incoming documents for work on merchant imports."
-        - "Helped build a new batch api for stripe merchants who needed offline processing."
+        - "Lead a team that built a transactional cost model and billing. Responsible for booking 50% of revenue with four 9's of accuracy."
+        - "Built a tool that safely redacts incoming documents for work on merchant imports."
+        - "Built a new batch api for stripe merchants who needed offline processing."
+
 - job:
     title: "Engineering Manager"
     start: "2013"
@@ -79,7 +67,7 @@ experience:
 
 - job:
     title: "Lead Software Engineer"
-    start: "2011"
+    start: "2010"
     end: "2012"
     location: "Chicago, IL"
 
@@ -107,17 +95,10 @@ experience:
         - "Architected Client Side Google Maps Application, serving as the main user interface to searching for homes."
         - "Maintenance and improvement of the existing Rails infrastructure"
 
-- job:
-    title: "Software Developer"
-    start: "2008"
-    end: "2009"
-    location: "Seattle, Wa"
-
-    company: 
-        name: "Joyent Inc."
-        website: "http://joyent.com"
-
-    duties:
-        - "Designed a workflow description framework in Erlang for doing distributed computations."
-        - "Built an OAuth provider to handle authorization for front end api's coupled with an internal python OAuth library designed to be more flexible with our internal data structures."
-        - "Wrote several components of Joyent's smart platform including AMQP workers for distributing git repository management."
+education:
+    school: "Western Washington University"
+    location: "Bellingham, Wa"
+    degree: "BS Mathematics"
+    minor: "Physics"
+    start: "2001"
+    end: "2006"
