@@ -129,6 +129,8 @@ li {
   font-size: 1.2em;
   font-weight: bold;
   background-color: #CCC;
+  padding-left: 3px;
+  padding-right: 3px;
   padding-top: 3px;
   padding-bottom: 3px;
 }
