@@ -139,6 +139,12 @@ li {
   padding-bottom: 3px;
 }
 
+.post_body h2 {
+  font-weight: bold;
+  padding-bottom: 3px;
+  margin-bottom: 20px;
+}
+
 #posts-list {
   background-color: #bbb;
   margin-top: 30px;
