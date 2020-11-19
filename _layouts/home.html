@@ -26,14 +26,22 @@
 
     <p>In his free time Anders spends his time with his family in Seattle where he enjoys restoring vintage electronics and arcade games.</p>
 
-    <h2>Projects:</h2>
+    <h2>Posts:</h2>
 
+    <ul>
+      {% for post in site.posts %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <!--
     <ul id="projects">
       <li><a href="{% post_url 2020-03-15-asteroids-deluxe-restoration %}">Asteroids Deluxe Restoration</a></li>
       <li><a href="">Tempest Restoration</a></li>
       <li><a href="">Tektronix 310A Restoration</a></li>
       <li><a href="">Modular Supergun</a></li>
     </ul>
+    -->
 
   </div>
 
