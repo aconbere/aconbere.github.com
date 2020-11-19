@@ -1,33 +1,44 @@
+--
 name: "Anders Conbere"
 email: "anders@conbere.org"
 telephone: "707.968.7853"
 website: "http://anders.conbere.org"
 github: "https://github.com/aconbere"
-
 experience:
 - job:
-    title: "Engineering Manager"
-    start: "2017"
-    end: "present"
+    title: "Engineering Manager: LATAM"
+    start: "July 2019"
+    end: "November 2020"
     location: "Seattle, WA"
-
     company: 
         name: "Stripe"
         website: "http://stripe.com"
-
     duties:
-        - "Managed a team of twelve engineers on the infrastructure team responsible for our high security card holder environment. Delivered successful PCI audits every half. Built a deployment system that enabled end to end validation of deploy artifacts based on individual keys enable automated infrastructure while maintaining chain of custody for all artifacts."
+        - "Managed three teams of engineers in the global LATAM organization responsible for growing the Stripe business and merchant base in Latin America."
+        - "Launched Mexico to General Availability."
+        - "Launched Brazil to Public Availability."
+        - "Onboarded thousands of new merchants and hundreds of millions of dollars in processing volume."
+- job:
+    title: "Engineering Manager: Traffic"
+    start: "January 2017"
+    end: "July 2019"
+    location: "Seattle, WA"
+    company: 
+        name: "Stripe"
+        website: "http://stripe.com"
+    duties:
+        - "Managed a team of twelve engineers responsible for Stripe's high security card holder environment."
+        - "Delivered successful PCI audits every half."
+        - "Built a deployment system that enabled end to end validation of deploy artifacts based on individual keys enable automated infrastructure while maintaining chain of custody for all artifacts."
 
 - job:
     title: "Software Engineeer"
-    start: "2016"
-    end: "2017"
+    start: "January 2016"
+    end: "January 2017"
     location: "Seattle, WA"
-
     company: 
         name: "Stripe"
         website: "http://stripe.com"
-
     duties:
         - "Lead a team that built a transactional cost model and billing. Responsible for booking 50% of revenue with four 9's of accuracy."
         - "Built a tool that safely redacts incoming documents for work on merchant imports."
@@ -38,63 +49,50 @@ experience:
     start: "2013"
     end: "2016"
     location: "Seattle, WA"
-
     company: 
         name: "Upworthy"
         website: "http://www.upworthy.com"
-
     duties:
         - "Managed a team of three engineers predominantly to support our analytics infrastructure."
         - "Worked with my team to build a high throughput low latency analytics platform on top of kinesis."
         - "Worked with my team to bring autoscaling to our web application nearly eliminating website downtime."
         - "Built a feature flags systems to reduce the risk and improve the quality of new features shipped to production."
-
-experience:
 - job:
     title: "Senior Software Engineer"
     start: "2012"
     end: "2013"
     location: "New York, New York"
-
     company: 
         name: "Etsy"
         website: "http://etsy.com"
-
     duties:
         - "Introduced an international Monetary framework acting as a foundation to Etsy's new internal payments product."
         - "Rebuilt international language detection on a simple signals framework. Results were slightly better but with one quarter the amount of code."
         - "Helped maintain scala and scalding based hadoop infrastructure. Brought in standard build tools."
-
 - job:
     title: "Lead Software Engineer"
     start: "2010"
     end: "2012"
     location: "Chicago, IL"
-
     company: 
         name: "Obama For America"
         website: "http://www.barackobama.com"
-
     duties:
         - "Lead a team of 3 to 4 engineers in development of the primary services API for the campaign."
         - "Principle engineer of the middleware architecture used to provide foundation of future web development work at the Obama campaign."
         - "Code reviews and release management to ensure stability."
         - "Work with multiple teams and consumers to provide a robust system of tools and apis to access internal data via the api."
-
 - job:
     title: "Software Developer"
     start: "2009"
     end: "2011"
     location: "Seattle, Wa"
-
     company: 
         name: "Estately Inc."
         website: "http://estately.com"
-
     duties:
         - "Architected Client Side Google Maps Application, serving as the main user interface to searching for homes."
         - "Maintenance and improvement of the existing Rails infrastructure"
-
 education:
     school: "Western Washington University"
     location: "Bellingham, Wa"

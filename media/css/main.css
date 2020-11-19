@@ -61,7 +61,6 @@ li {
 }
 
 #header h1, #header h2 {
-    font-family: "Kulminoituva", helvetica, sans-serif;
     font-size: 6em;
     text-align: center;
 }
@@ -72,22 +71,13 @@ li {
 
 #content {
     width: 50%;
-    font-size: .9em;
+    font-size: 1.5em;
     margin-left: auto;
     margin-right: auto;
 }
 
 #content p {
-    line-height: 22px;
-}
-
-.post h3 {
-    font-size: 1.8em;
-    font-family: helvetica;
-    margin-left: -30px;
-    margin-bottom: 6px;
-    padding-bottom: 7px;
-    border-bottom: 2px solid #72C6EF;
+  padding-bottom: 25px;
 }
 
 .meta {
@@ -106,6 +96,15 @@ li {
 .post {
     padding-top: 30px;
     margin-bottom: 30px;
+}
+
+.post h3 {
+    font-size: 1.8em;
+    font-family: helvetica;
+    margin-left: -30px;
+    margin-bottom: 6px;
+    padding-bottom: 7px;
+    border-bottom: 2px solid #72C6EF;
 }
 
 .post_body img {
@@ -157,4 +156,3 @@ li {
     padding: 10px;
     padding-left: 30px;
 }
-
