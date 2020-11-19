@@ -69,6 +69,10 @@ li {
   color: #000;
 }
 
+#header .page-title {
+  font-weight: bold;
+}
+
 #content {
   width: 70%;
   font-size: 1.5em;
