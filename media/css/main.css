@@ -1,79 +1,79 @@
 a {
-    color: #333;
-    text-decoration: none;
+  color: #333;
+  text-decoration: none;
 }
 
 a:visited {
-    color: #777;
+  color: #555;
 }
 
 em {
-    font-style: italic;
+  font-style: italic;
 }
 
 body {
-    font-family: helvetica;
+  font-family: helvetica;
 }
 
 pre {
-    width: 80%;
-    margin: 20px;
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #eee;
-    font-size: 1.2em;
-    padding: 13px;
-    overflow: scroll;
+  width: 80%;
+  margin: 20px;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #eee;
+  font-size: 1.2em;
+  padding: 13px;
+  overflow: scroll;
 }
 
 blockquote {
-    background-color: #eee;
-    margin: 20px;
-    margin-top: 0px;
-    padding: 13px;
-    font-size: 1em;
+  background-color: #eee;
+  margin: 20px;
+  margin-top: 0px;
+  padding: 13px;
+  font-size: 1em;
 }
 
 ul, ol {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 #header {
-    padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 
 #header h3 {
-    background-color: #333;
-    color: #bbb;
-    padding: 10px;
-    padding-left: 30px;
-    margin-bottom: 20px;
+  background-color: #333;
+  color: #bbb;
+  padding: 10px;
+  padding-left: 30px;
+  margin-bottom: 20px;
 }
 
 #header h3 a {
-    color: #bbb;
+  color: #bbb;
 }
 
 #header h1, #header h2 {
-    font-size: 6em;
-    text-align: center;
+  font-size: 6em;
+  text-align: center;
 }
 
 #header h1 a:visited {
-    color: #000;
+  color: #000;
 }
 
 #content {
-    width: 50%;
-    font-size: 1.5em;
-    margin-left: auto;
-    margin-right: auto;
+  width: 70%;
+  font-size: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #content p {
@@ -81,64 +81,73 @@ li {
 }
 
 .meta {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .meta p {
-    padding-top: 0px;
-    font-style: italic;
+  padding-top: 0px;
+  font-style: italic;
 }
 
 #content .post:first-child {
-    padding-top: 0px;
+  padding-top: 0px;
 }
 
 .post {
-    padding-top: 30px;
-    margin-bottom: 30px;
+  padding-top: 30px;
+  margin-bottom: 30px;
 }
 
 .post h3 {
-    font-size: 1.8em;
-    font-family: helvetica;
-    margin-left: -30px;
-    margin-bottom: 6px;
-    padding-bottom: 7px;
-    border-bottom: 2px solid #72C6EF;
+  font-size: 1.8em;
+  font-family: helvetica;
+  margin-left: -30px;
+  margin-bottom: 6px;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #72C6EF;
 }
 
 .post_body img {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-bottom: 20px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 20px;
 }
 
 .post_body p {
-    padding-bottom: 20px;
-    text-align: justify;
+  padding-bottom: 20px;
+  text-align: justify;
 }
 
 .post_body a {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+.post_body h1 {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #CCC;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 #posts-list {
-    background-color: #bbb;
-    margin-top: 30px;
+  background-color: #bbb;
+  margin-top: 30px;
 }
 
 #posts-list p {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .posts-list-inner {
-    width: 50%;
-    font-size: .9em;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 30px;
+  width: 50%;
+  font-size: .9em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
 }
 
 .posts-list-inner ol li {
@@ -146,13 +155,13 @@ li {
 }
 
 #footer a {
-    color: #ddd;
-    margin-left: 5px;
+  color: #ddd;
+  margin-left: 5px;
 }
 
 #footer p {
-    background-color: #333;
-    color: #bbb;
-    padding: 10px;
-    padding-left: 30px;
+  background-color: #333;
+  color: #bbb;
+  padding: 10px;
+  padding-left: 30px;
 }
