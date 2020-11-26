@@ -7,10 +7,6 @@ a:visited {
   color: #555;
 }
 
-em {
-  font-style: italic;
-}
-
 body {
   font-family: helvetica;
 }
@@ -22,7 +18,7 @@ pre {
   margin-left: auto;
   margin-right: auto;
   background-color: #eee;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   padding: 13px;
   overflow: scroll;
 }
@@ -32,146 +28,81 @@ blockquote {
   margin: 20px;
   margin-top: 0px;
   padding: 13px;
-  font-size: 1em;
-}
-
-ul, ol {
-  padding-bottom: 20px;
-}
-
-li {
-  margin-left: 20px;
+  font-size: 1rem;
 }
 
 #header {
-  padding-bottom: 20px;
-}
-
-
-#header h3 {
-  background-color: #333;
-  color: #bbb;
-  padding: 10px;
-  padding-left: 30px;
-  margin-bottom: 20px;
-}
-
-#header h3 a {
-  color: #bbb;
-}
-
-#header h1, #header h2 {
-  font-size: 6em;
-  text-align: center;
-}
-
-#header h1 a:visited {
-  color: #000;
-}
-
-#header .page-title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-align: left;
   font-weight: bold;
 }
 
 #content {
   width: 70%;
-  font-size: 1.5em;
+  max-width: 768px;
+  font-size: 1.5rem;
   margin-left: auto;
   margin-right: auto;
 }
 
-#content p {
-  padding-bottom: 25px;
-}
-
-.meta {
-  margin-bottom: 20px;
-}
-
-.meta p {
-  padding-top: 0px;
-  font-style: italic;
-}
-
-#content .post:first-child {
-  padding-top: 0px;
-}
-
-.post {
-  padding-top: 30px;
+#post {
   margin-bottom: 30px;
 }
 
-.post h3 {
-  font-size: 1.8em;
-  font-family: helvetica;
-  margin-left: -30px;
-  margin-bottom: 6px;
-  padding-bottom: 7px;
-  border-bottom: 2px solid #72C6EF;
-}
-
-.post_body img {
+#post img {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
-.post_body p {
-  padding-bottom: 20px;
-  text-align: justify;
+#post p {
+  padding-bottom: 1.5rem;
 }
 
-.post_body a {
-  text-decoration: underline;
+#post a {
+  color: #20639B;
 }
 
-.post_body h1 {
-  margin-bottom: 20px;
-  font-size: 1.2em;
-  font-weight: bold;
-  background-color: #CCC;
-  padding-left: 3px;
-  padding-right: 3px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+#post h1 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  color: #0c1e29;
 }
 
-.post_body h2 {
-  font-weight: bold;
-  padding-bottom: 3px;
-  margin-bottom: 20px;
+#post h2 {
+  color: #0c1e29;
+  font-size: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
 }
 
-#posts-list {
-  background-color: #bbb;
-  margin-top: 30px;
+#post h3 {
+  color: #0c1e29;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-#posts-list p {
-  padding-top: 20px;
+#post p {
+  margin-bottom: 1.5rem;
+  color: #36444c;
 }
 
-.posts-list-inner {
-  width: 50%;
-  font-size: .9em;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 30px;
-}
-
-.posts-list-inner ol li {
-  list-style: none;
+#post li {
+  margin-bottom: 1rem;
+  color: #36444c;
 }
 
 #footer a {
   color: #ddd;
-  margin-left: 5px;
+  padding-left: 5px;
 }
 
-#footer p {
+#footer {
   background-color: #333;
   color: #bbb;
   padding: 10px;

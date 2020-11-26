@@ -3,7 +3,7 @@ layout: post
 title:  "Asteroids Deluxe Restoration"
 ---
 
-# Asteroids Deluxe
+## Asteroids Deluxe
 
 [DRAFT] describe with images asteroids deluxe
 

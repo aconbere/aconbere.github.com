@@ -2,30 +2,24 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Anders Conbere - {{ page.title }}</title>
   <link rel="stylesheet" href="/media/css/syntax.css">
-  <link rel="stylesheet" href="/media/css/base.css">
-  <link rel="stylesheet" href="/media/css/reset.css">
   <link rel="stylesheet" href="/media/css/main.css">
-  <link rel="stylesheet" href="/media/css/fonts.css">
 </head>
 
 <body>
   <div id="header">
-    <h3><a href="/">&lt; Take me home</a> | <a href="{{page.url}}" class="page-title">{{ page.title }}</a></h3>
+    <a href="/">&lt; Home</a>
   </div>
 
   <div id="content">
-    <div class="post">
-      {{ content }}
-    </div>
+    {{ content }}
   </div>
 
   <div id="footer">
-    <p>
-      <a href="/resume.yml">Resume</a> &raquo; <a href="http://twitter.com/aconbere">Twitter</a> &raquo; <a href="http://github.com/aconbere">Github</a>
-    </p>
+    <a href="/resume.yml">Resume</a> |
+    <a href="http://twitter.com/aconbere">Twitter</a> | 
+    <a href="http://github.com/aconbere">Github</a>
   </div>
 </body>
 </html>

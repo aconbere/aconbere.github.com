@@ -1,57 +1,40 @@
 {% assign post = site.posts.first %}
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-    "http://www.w3.org/TR/html4/strict.dtd">
-
+<!DOCTYPE html>
 <html>
 <head>
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" type="text/css" media="screen" href="/media/css/base.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="/media/css/reset.css">
+  <meta charset="utf-8">
+  <title>Anders Conbere - Home</title>
   <link rel="stylesheet" type="text/css" media="screen" href="/media/css/main.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="/media/css/fonts.css">
 </head>
 
 <body>
   <div id="header">
-    <h3><a href="/">&lt;- Take me home</a></h3>
+    <a href="/">&lt; Home</a>
   </div>
-
 
   <div id="content">
-    <div class="meta">
-      <h3 id="document_title"><a href="/">Anders Conbere</a></h3>
+    <div class="post">
+      <h1 id="document_title"><a href="/">Anders Conbere</a></h1>
+      <p>Anders Conbere is an experienced Engineering Manager and Software Engineer with over 15 years of experience. He has lead teams at Obama for America, Upworthy, and Stripe in a number of technical domains; from realtime data processing, large scale web api development, high security production engineering, and global payments products.</p>
+
+      <p>In his free time Anders spends his time with his family in Seattle where he enjoys restoring vintage electronics and arcade games.</p>
+
+      <h2>Posts:</h2>
+
+      <ul>
+        {% for post in site.posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
     </div>
-    <p>Anders Conbere is an experienced Engineering Manager and Software Engineer with over 15 years of experience. He has lead teams at Obama for America, Upworthy, and Stripe in a number of technical domains; from realtime data processing, large scale web api development, high security production engineering, and global payments products.</p>
-
-    <p>In his free time Anders spends his time with his family in Seattle where he enjoys restoring vintage electronics and arcade games.</p>
-
-    <h2>Posts:</h2>
-
-    <ul>
-      {% for post in site.posts %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
-
-    <!--
-    <ul id="projects">
-      <li><a href="{% post_url 2020-03-15-asteroids-deluxe-restoration %}">Asteroids Deluxe Restoration</a></li>
-      <li><a href="">Tempest Restoration</a></li>
-      <li><a href="">Tektronix 310A Restoration</a></li>
-      <li><a href="">Modular Supergun</a></li>
-    </ul>
-    -->
-
   </div>
 
+
   <div id="footer">
-    <p>
-      <a href="/resume.yml">Resume</a> &raquo;
-      <a href="http://twitter.com/aconbere">Twitter</a> &raquo;
-      <a href="http://github.com/aconbere">Github</a> &raquo;
-      <a href="/projects">Projects</a>
-    </p>
+    <a href="/resume.yml">Resume</a> |
+    <a href="http://twitter.com/aconbere">Twitter</a> |
+    <a href="http://github.com/aconbere">Github</a>
   </div>
 </body>
 </html>
