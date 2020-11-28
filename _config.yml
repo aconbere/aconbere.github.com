@@ -2,3 +2,5 @@ name: Anders Conbere
 author: Anders Conbere
 markdown: kramdown
 highlighter: rouge
+jekyll_compose:
+  auto_open: true

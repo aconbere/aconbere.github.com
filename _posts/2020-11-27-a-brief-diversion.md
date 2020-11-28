@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A Brief Diversion: Rust AVR
+title: "A Brief Diversion: Rust AVR"
 date: 2020-11-27 19:14 -0800
 ---
 
