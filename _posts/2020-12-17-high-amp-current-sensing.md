@@ -8,8 +8,8 @@ The current project I'm working on, a relay that provides remote triggering and 
 
 Here are some pictures of the boards as the arrived from the manufacturer and a dry fitting.
 
-<img src="media/img/sensing-relay-v0-board.jpg">
-<img src="media/img/sensing-relay-v0-dry-fit.jpg">
+<img src="/media/img/sensing-relay-v0-board.jpg">
+<img src="/media/img/sensing-relay-v0-dry-fit.jpg">
 
 
 The biggest mistake is that I've radically missunderstood the way that the TI TMCS-1101 hall effect sensor works. My mental model of this device was that it operated in parallel with the existing current path, took some trickle current, measured that and amplified it. But that is NOT the correct model. As I was reading the datasheet again it became clear that this device is expected to run in series with the current path as shown in [this picture](/media/img/TMCS1101-inline-motor-phase-sensing). While that in and of itself wouldn't be dissasterous it made me think more about the overall design parameters of this project.
