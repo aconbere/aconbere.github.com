@@ -21,3 +21,7 @@ So, step one has been, digging deeper into the methods of current sensing. Digik
 Small mistake... totally forgot a current limiting resistor on the power LED.
 
 Another observation from reading more about current sensing technology is that a lot of folks use heft Lugs on the PCB and that's an interesting direction to go if I'm going to need to run the full load through the device.
+
+Notes:
+* [Alegro: Secrets of Measuring Currents Above 50 Amps](https://www.allegromicro.com/en/insights-and-innovations/technical-documents/hall-effect-sensor-ic-publications/an296141-secrets-of-measuring-currents-above-50-amps)
+* [Selecting an Appropriate Shunt Resistor](https://training.ti.com/getting-started-current-sense-amplifiers-session-4-how-choose-appropriate-shunt-resistor) 

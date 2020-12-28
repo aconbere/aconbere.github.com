@@ -28,9 +28,9 @@ experience:
         website: "http://stripe.com"
     duties:
         - "Managed a team of twelve engineers responsible for Stripe's high security card holder environment."
-        - "Delivered successful PCI audits every half."
+        - "Responsible for infrastructure that handled 100% of Stripe API traffic at six 9's of reliability."
+        - "Built a PCI compliance program that successfully delivered successful PCI audits every quarter."
         - "Built a deployment system that enabled end to end validation of deploy artifacts based on individual keys enable automated infrastructure while maintaining chain of custody for all artifacts."
-
 - job:
     title: "Software Engineeer"
     start: "January 2016"
